@@ -39,6 +39,7 @@
     line-height: 1.55;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+    overflow-x: hidden;
   }
 
   a {
@@ -602,6 +603,9 @@
 
   /* ───────────────────── responsive ───────────────────── */
   @media (max-width: 880px) {
+    .hero { padding: clamp(40px, 8vw, 64px) 0 clamp(40px, 7vw, 60px); }
+    .hero .lede { max-width: 46ch; }
+    section.block { padding: clamp(38px, 6.4vw, 60px) 0; }
     .section-grid { grid-template-columns: 1fr; gap: 28px; }
     .section-num { margin-bottom: -8px; }
     .stat-grid { grid-template-columns: 1fr; }
@@ -620,11 +624,48 @@
     .why-list li { grid-template-columns: 1fr; gap: 6px; }
     .creds { grid-template-columns: 1fr; }
   }
+  @media (max-width: 640px) {
+    :root { --gutter: 16px; }
+    .site-header .inner { align-items: flex-start; flex-wrap: wrap; row-gap: 10px; }
+    .wordmark { font-size: 28px; gap: 10px; }
+    .wordmark .mark { width: 48px; height: 48px; flex-basis: 48px; }
+    .status { width: 100%; justify-content: center; }
+    .hero { padding: 34px 0 40px; }
+    .eyebrow { font-size: 10px; margin-bottom: 14px; gap: 8px; }
+    .eyebrow::before { width: 18px; }
+    .hero h1 { font-size: clamp(30px, 9.2vw, 44px); margin-bottom: 16px; max-width: 13ch; }
+    .hero .lede { font-size: 16px; margin-bottom: 24px; }
+    section.block { padding: 34px 0; }
+    .section-title { font-size: clamp(26px, 7.8vw, 34px); margin: 0 0 16px; }
+    .lead { font-size: 17px; line-height: 1.5; }
+    .stat-grid { margin: 24px 0 14px; }
+    .stat { padding: 18px 0; }
+    .stat .figure { font-size: clamp(34px, 13vw, 46px); margin-bottom: 8px; }
+    .stat .label { font-size: 13px; }
+    .product-col .pname { font-size: clamp(20px, 7.5vw, 24px); }
+    .why-list li { padding: 14px 0; }
+    .involve { padding: 24px 0; }
+    .involve h4 { font-size: clamp(20px, 7.2vw, 24px); }
+    .involve p { margin: 0 0 16px; }
+    .footer-brand .wordmark { font-size: 30px; }
+    .footer-brand .wordmark .mark { width: 58px; height: 58px; flex-basis: 58px; }
+    .sankofa { width: 56px; height: 56px; }
+    .footer-bottom { flex-direction: column; align-items: flex-start; gap: 10px; }
+    .proverb .akan { font-size: clamp(20px, 6.5vw, 26px); }
+    .vb-claim { font-size: clamp(20px, 6.2vw, 26px); }
+    .vb-cta { width: 100%; justify-content: space-between; white-space: normal; }
+  }
   @media (max-width: 520px) {
-    .site-header .inner { padding: 14px 0; flex-wrap: wrap; row-gap: 10px; }
+    .site-header .inner { padding: 12px 0; }
     .status { font-size: 10px; padding: 5px 9px; letter-spacing: 0.1em; }
-    .hero h1 { font-size: clamp(32px, 9vw, 44px); }
-    .cta-row .btn { width: 100%; justify-content: space-between; }
+    .hero h1 { font-size: clamp(28px, 10vw, 38px); }
+    .cta-row { gap: 10px; }
+    .cta-row .btn {
+      width: 100%;
+      justify-content: space-between;
+      padding: 13px 16px;
+      font-size: 13.5px;
+    }
     .footer-grid { grid-template-columns: 1fr; }
   }
 
@@ -1018,7 +1059,7 @@
         <span>© 2026 Sanko Ltd. Registered in England &amp; Wales.</span>
       </div>
       <div class="right">
-        <span>Sources cited in §01 are the canonical references for ICD-11 TM coverage.</span>
+        <span>Sources cited in 01 are the canonical references for ICD-11 TM coverage.</span>
       </div>
     </div>
   </div>

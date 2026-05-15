@@ -11,7 +11,7 @@ export default function EOSMPanel() {
       <div style={{ marginBottom: 12 }}>
         <div style={{ display: 'flex', alignItems: 'baseline', gap: 8, flexWrap: 'wrap' }}>
           <span style={{ color: 'var(--gold)', fontSize: 13, letterSpacing: 1, textTransform: 'uppercase', fontWeight: 700 }}>
-            § 0X
+            0X
           </span>
           <h3 style={{ margin: 0, fontFamily: "'Manrope', sans-serif", fontSize: 22, color: 'var(--ink)' }}>
             Evidence Ontology and Structuring Method (EOSM)

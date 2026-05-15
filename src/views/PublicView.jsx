@@ -80,7 +80,7 @@ export default function PublicView() {
 
       <section style={{ marginTop: 14, border: '1px solid var(--rule)', borderRadius: 4, background: 'var(--bg-alt)', padding: 14 }}>
         <div style={{ display: 'flex', alignItems: 'baseline', gap: 8, marginBottom: 10, flexWrap: 'wrap' }}>
-          <span style={{ color: 'var(--gold)', fontSize: 12, letterSpacing: 1, textTransform: 'uppercase', fontWeight: 700 }}>§ 0X</span>
+          <span style={{ color: 'var(--gold)', fontSize: 12, letterSpacing: 1, textTransform: 'uppercase', fontWeight: 700 }}>0X</span>
           <h3 style={{ margin: 0, fontFamily: "'Manrope', sans-serif", fontSize: 22, color: 'var(--ink)' }}>Tiered access and benefit-sharing</h3>
         </div>
 

@@ -126,7 +126,9 @@ function DashboardView({ onOpenVault, onOpenPatient, onOpenFormulation, onOpenPa
         </button>
       </div>
 
-      <EOSMPanel />
+      <div style={{ marginTop: 14 }}>
+        <EOSMPanel />
+      </div>
 
       <div style={{ display: 'grid', gridTemplateColumns: 'repeat(4, minmax(0, 1fr))', gap: 12 }}>
         <div style={{ background: 'rgba(255,255,255,0.02)', border: '1px solid rgba(255,255,255,0.05)', borderRadius: 10, padding: '14px 16px' }}>
