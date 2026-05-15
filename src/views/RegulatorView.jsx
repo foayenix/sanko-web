@@ -37,25 +37,25 @@ export default function RegulatorView() {
         }
       `}</style>
 
-      <div style={{ display: 'inline-block', padding: '5px 12px', borderRadius: 999, background: 'rgba(184,134,11,0.12)', border: '1px solid rgba(184,134,11,0.24)', color: COLORS.gold, fontSize: 11, fontWeight: 700, marginBottom: 10 }}>
-        🏛️ Sanko Governance Dashboard
+      <div style={{ display: 'inline-block', padding: '5px 12px', borderRadius: 999, background: 'rgba(184,134,11,0.12)', border: '1px solid rgba(184,134,11,0.24)', color: COLORS.gold, fontSize: 12, fontWeight: 700, marginBottom: 10 }}>
+        Sanko Governance Dashboard
       </div>
-      <h2 style={{ margin: 0, fontFamily: "'Instrument Serif', serif", fontSize: 24, color: 'rgba(255,255,255,0.92)' }}>Traditional medicine — population-level intelligence</h2>
-      <div style={{ marginTop: 8, fontSize: 13, color: 'rgba(255,255,255,0.45)' }}>
+      <h2 style={{ margin: 0, fontFamily: "'Source Serif 4', serif", fontSize: 24, color: 'rgba(255,255,255,0.92)' }}>Traditional medicine — population-level intelligence</h2>
+      <div style={{ marginTop: 8, fontSize: 14, color: 'rgba(255,255,255,0.45)' }}>
         Real-time data on traditional medicine usage, outcomes, and safety signals across Nigeria.
       </div>
 
       <div style={{ marginTop: 14, display: 'grid', gridTemplateColumns: 'repeat(5, minmax(0, 1fr))', gap: 10 }}>
-        <div style={{ background: 'rgba(255,255,255,0.03)', border: '1px solid rgba(255,255,255,0.07)', borderRadius: 10, padding: 12 }}><div style={{ fontFamily: "'Instrument Serif', serif", fontSize: 24, color: COLORS.forest }}>12,400</div><div style={{ fontSize: 11, color: 'rgba(255,255,255,0.35)' }}>Active practitioners</div></div>
-        <div style={{ background: 'rgba(255,255,255,0.03)', border: '1px solid rgba(255,255,255,0.07)', borderRadius: 10, padding: 12 }}><div style={{ fontFamily: "'Instrument Serif', serif", fontSize: 24 }}>54,200</div><div style={{ fontSize: 11, color: 'rgba(255,255,255,0.35)' }}>Formulations documented</div></div>
-        <div style={{ background: 'rgba(255,255,255,0.03)', border: '1px solid rgba(255,255,255,0.07)', borderRadius: 10, padding: 12 }}><div style={{ fontFamily: "'Instrument Serif', serif", fontSize: 24 }}>186,000</div><div style={{ fontSize: 11, color: 'rgba(255,255,255,0.35)' }}>Patient outcomes tracked</div></div>
-        <div style={{ background: 'rgba(255,255,255,0.03)', border: '1px solid rgba(255,255,255,0.07)', borderRadius: 10, padding: 12 }}><div style={{ fontFamily: "'Instrument Serif', serif", fontSize: 24, color: COLORS.forest }}>82%</div><div style={{ fontSize: 11, color: 'rgba(255,255,255,0.35)' }}>National avg effectiveness</div></div>
-        <div style={{ background: 'rgba(255,255,255,0.03)', border: '1px solid rgba(255,255,255,0.07)', borderRadius: 10, padding: 12 }}><div style={{ fontFamily: "'Instrument Serif', serif", fontSize: 24, color: '#F87171' }}>3</div><div style={{ fontSize: 11, color: 'rgba(255,255,255,0.35)' }}>Active safety signals</div></div>
+        <div style={{ background: 'rgba(255,255,255,0.03)', border: '1px solid rgba(255,255,255,0.07)', borderRadius: 10, padding: 12 }}><div style={{ fontFamily: "'Manrope', sans-serif", fontSize: 24, color: COLORS.forest }}>12,400</div><div style={{ fontSize: 12, color: 'rgba(255,255,255,0.35)' }}>Active practitioners</div></div>
+        <div style={{ background: 'rgba(255,255,255,0.03)', border: '1px solid rgba(255,255,255,0.07)', borderRadius: 10, padding: 12 }}><div style={{ fontFamily: "'Manrope', sans-serif", fontSize: 24 }}>54,200</div><div style={{ fontSize: 12, color: 'rgba(255,255,255,0.35)' }}>Formulations documented</div></div>
+        <div style={{ background: 'rgba(255,255,255,0.03)', border: '1px solid rgba(255,255,255,0.07)', borderRadius: 10, padding: 12 }}><div style={{ fontFamily: "'Manrope', sans-serif", fontSize: 24 }}>186,000</div><div style={{ fontSize: 12, color: 'rgba(255,255,255,0.35)' }}>Patient outcomes tracked</div></div>
+        <div style={{ background: 'rgba(255,255,255,0.03)', border: '1px solid rgba(255,255,255,0.07)', borderRadius: 10, padding: 12 }}><div style={{ fontFamily: "'Manrope', sans-serif", fontSize: 24, color: COLORS.forest }}>82%</div><div style={{ fontSize: 12, color: 'rgba(255,255,255,0.35)' }}>National patient-reported improvement (n=186,000)</div></div>
+        <div style={{ background: 'rgba(255,255,255,0.03)', border: '1px solid rgba(255,255,255,0.07)', borderRadius: 10, padding: 12 }}><div style={{ fontFamily: "'Manrope', sans-serif", fontSize: 24, color: '#F87171' }}>3</div><div style={{ fontSize: 12, color: 'rgba(255,255,255,0.35)' }}>Active safety signals</div></div>
       </div>
 
       <div style={{ marginTop: 14, display: 'grid', gridTemplateColumns: '1.1fr 1fr', gap: 12 }}>
         <div style={{ background: 'rgba(255,255,255,0.03)', border: '1px solid rgba(255,255,255,0.08)', borderRadius: 12, padding: 14 }}>
-          <div style={{ fontSize: 13, fontWeight: 700, color: 'rgba(255,255,255,0.75)', marginBottom: 10 }}>Usage density by state</div>
+          <div style={{ fontSize: 14, fontWeight: 700, color: 'rgba(255,255,255,0.75)', marginBottom: 10 }}>Usage density by state</div>
           <div style={{ position: 'relative', height: 200, borderRadius: 10, background: 'radial-gradient(circle at 30% 30%, rgba(27,107,58,0.18), rgba(27,107,58,0.04) 60%, rgba(255,255,255,0.02) 100%)', border: '1px solid rgba(27,107,58,0.14)' }}>
             {CITIES.map((city) => {
               const active = selectedCity?.name === city.name;
@@ -85,14 +85,14 @@ export default function RegulatorView() {
             <div style={{ marginTop: 10, background: 'rgba(255,255,255,0.02)', border: '1px solid rgba(255,255,255,0.08)', borderRadius: 10, padding: 12 }}>
               <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
                 <div style={{ fontSize: 16, fontWeight: 700, color: 'rgba(255,255,255,0.85)' }}>{selectedCity.name}</div>
-                <button type="button" onClick={() => setSelectedCity(null)} style={{ background: 'none', border: 'none', color: 'rgba(255,255,255,0.5)', cursor: 'pointer', fontSize: 12 }}>Close ×</button>
+                <button type="button" onClick={() => setSelectedCity(null)} style={{ background: 'none', border: 'none', color: 'rgba(255,255,255,0.5)', cursor: 'pointer', fontSize: 13 }}>Close ×</button>
               </div>
-              <div style={{ marginTop: 6, fontSize: 12, color: 'rgba(255,255,255,0.5)' }}>
+              <div style={{ marginTop: 6, fontSize: 13, color: 'rgba(255,255,255,0.5)' }}>
                 {selectedCity.practitioners.toLocaleString()} practitioners · {selectedCity.formulations.toLocaleString()} formulations
               </div>
               <div style={{ marginTop: 8, display: 'flex', flexWrap: 'wrap', gap: 6 }}>
                 {selectedCity.conditions.map((condition) => (
-                  <span key={condition} style={{ padding: '2px 8px', borderRadius: 6, fontSize: 10, fontWeight: 700, background: 'rgba(27,107,58,0.12)', color: '#4ADE80' }}>{condition}</span>
+                  <span key={condition} style={{ padding: '2px 8px', borderRadius: 6, fontSize: 12, fontWeight: 700, background: 'rgba(27,107,58,0.12)', color: '#4ADE80' }}>{condition}</span>
                 ))}
               </div>
             </div>
@@ -100,7 +100,7 @@ export default function RegulatorView() {
         </div>
 
         <div style={{ background: 'rgba(255,255,255,0.03)', border: '1px solid rgba(255,255,255,0.08)', borderRadius: 12, padding: 14, position: 'relative' }}>
-          <div style={{ fontSize: 13, fontWeight: 700, color: 'rgba(255,255,255,0.75)', marginBottom: 10 }}>Top conditions treated</div>
+          <div style={{ fontSize: 14, fontWeight: 700, color: 'rgba(255,255,255,0.75)', marginBottom: 10 }}>Top conditions treated</div>
           <div style={{ display: 'flex', alignItems: 'flex-end', gap: 8, minHeight: 170 }}>
             {CONDITION_DATA.map((item, index) => (
               <div
@@ -109,7 +109,7 @@ export default function RegulatorView() {
                 onMouseLeave={() => setHoveredBar(null)}
                 style={{ flex: 1, display: 'flex', flexDirection: 'column', alignItems: 'center', gap: 4, position: 'relative' }}
               >
-                <div style={{ fontSize: 10, color: 'rgba(255,255,255,0.55)' }}>{item.percent}%</div>
+                <div style={{ fontSize: 12, color: 'rgba(255,255,255,0.55)' }}>{item.percent}%</div>
                 <div style={{ width: '100%', maxWidth: 34, borderRadius: '4px 4px 0 0', background: `rgba(27,107,58,${0.85 - index * 0.08})`, height: `${(item.percent / 32) * 120}px` }} />
                 <div style={{ fontSize: 9, color: 'rgba(255,255,255,0.35)', textAlign: 'center' }}>{item.label}</div>
               </div>
@@ -117,7 +117,7 @@ export default function RegulatorView() {
           </div>
 
           {hoveredBar && (
-            <div style={{ position: 'absolute', right: 10, top: 10, padding: '6px 10px', borderRadius: 8, background: 'var(--bg-alt)', border: '1px solid var(--rule)', fontSize: 11, color: 'var(--ink-soft)' }}>
+            <div style={{ position: 'absolute', right: 10, top: 10, padding: '6px 10px', borderRadius: 8, background: 'var(--bg-alt)', border: '1px solid var(--rule)', fontSize: 12, color: 'var(--ink-soft)' }}>
               {(() => {
                 const item = CONDITION_DATA.find((entry) => entry.label === hoveredBar);
                 return `${item.label}: ${item.percent}% · ${item.cases} tracked cases`;
@@ -128,8 +128,11 @@ export default function RegulatorView() {
       </div>
 
       <div style={{ marginTop: 14, background: 'rgba(255,255,255,0.03)', border: '1px solid rgba(255,255,255,0.08)', borderRadius: 12, padding: 14 }}>
-        <div style={{ fontSize: 13, fontWeight: 700, color: '#F87171' }}>⚠️ Active pharmacovigilance signals</div>
-        <div style={{ marginTop: 4, fontSize: 11, color: 'rgba(255,255,255,0.4)', marginBottom: 10 }}>Auto-detected from outcome data</div>
+        <div style={{ fontSize: 14, fontWeight: 700, color: '#F87171' }}>Active pharmacovigilance signals</div>
+        <div style={{ marginTop: 4, fontSize: 12, color: 'rgba(255,255,255,0.4)', marginBottom: 10 }}>Auto-detected from outcome data</div>
+        <div style={{ marginTop: -2, marginBottom: 10, fontSize: 12, letterSpacing: 0.6, textTransform: 'uppercase', color: 'var(--muted)', fontStyle: 'italic' }}>
+          Patient-reported outcomes. Documentation signal, not clinical efficacy.
+        </div>
 
         {SAFETY_SIGNALS.map((signal) => {
           const expanded = expandedSignal === signal.id;
@@ -141,44 +144,44 @@ export default function RegulatorView() {
               key={signal.id}
               type="button"
               onClick={() => setExpandedSignal((prev) => (prev === signal.id ? null : signal.id))}
-              style={{ width: '100%', background: 'rgba(255,255,255,0.02)', border: expanded ? `1px solid ${COLORS.terra}` : '1px solid rgba(255,255,255,0.08)', borderRadius: 10, padding: 12, textAlign: 'left', marginBottom: 8, cursor: 'pointer', fontFamily: "'Plus Jakarta Sans', sans-serif" }}
+              style={{ width: '100%', background: 'rgba(255,255,255,0.02)', border: expanded ? `1px solid ${COLORS.terra}` : '1px solid rgba(255,255,255,0.08)', borderRadius: 10, padding: 12, textAlign: 'left', marginBottom: 8, cursor: 'pointer', fontFamily: "'Manrope', sans-serif" }}
             >
-              <div style={{ fontSize: 13, fontWeight: 700, color: 'rgba(255,255,255,0.85)' }}>{signal.title}</div>
+              <div style={{ fontSize: 14, fontWeight: 700, color: 'rgba(255,255,255,0.85)' }}>{signal.title}</div>
               <div style={{ marginTop: 6, display: 'flex', flexWrap: 'wrap', gap: 6, alignItems: 'center' }}>
-                <span style={{ fontSize: 11, color: 'rgba(255,255,255,0.45)' }}>{signal.region}</span>
-                <span style={{ fontSize: 11, color: 'rgba(255,255,255,0.45)' }}>{signal.reports} reports</span>
-                <span style={{ padding: '2px 8px', borderRadius: 999, fontSize: 10, fontWeight: 700, background: severityBg, color: severityColor }}>{signal.severity}</span>
-                <span style={{ padding: '2px 8px', borderRadius: 999, fontSize: 10, fontWeight: 700, background: statusBlue ? 'rgba(45,75,142,0.2)' : 'rgba(255,255,255,0.1)', color: statusBlue ? '#60A5FA' : 'rgba(255,255,255,0.65)' }}>{signal.status}</span>
+                <span style={{ fontSize: 12, color: 'rgba(255,255,255,0.45)' }}>{signal.region}</span>
+                <span style={{ fontSize: 12, color: 'rgba(255,255,255,0.45)' }}>{signal.reports} reports</span>
+                <span style={{ padding: '2px 8px', borderRadius: 999, fontSize: 12, fontWeight: 700, background: severityBg, color: severityColor }}>{signal.severity}</span>
+                <span style={{ padding: '2px 8px', borderRadius: 999, fontSize: 12, fontWeight: 700, background: statusBlue ? 'rgba(45,75,142,0.2)' : 'rgba(255,255,255,0.1)', color: statusBlue ? '#60A5FA' : 'rgba(255,255,255,0.65)' }}>{signal.status}</span>
               </div>
 
               {expanded && (
                 <div style={{ marginTop: 10 }}>
-                  <div style={{ fontSize: 12, lineHeight: 1.6, color: 'rgba(255,255,255,0.56)', marginBottom: 8 }}>{signal.detail}</div>
-                  <div style={{ fontSize: 11, color: 'rgba(255,255,255,0.45)', marginBottom: 5 }}>Ingredients involved:</div>
+                  <div style={{ fontSize: 13, lineHeight: 1.6, color: 'rgba(255,255,255,0.56)', marginBottom: 8 }}>{signal.detail}</div>
+                  <div style={{ fontSize: 12, color: 'rgba(255,255,255,0.45)', marginBottom: 5 }}>Ingredients involved:</div>
                   <div style={{ display: 'flex', flexWrap: 'wrap', gap: 6, marginBottom: 8 }}>
                     {signal.ingredients.map((ingredient) => (
-                      <span key={ingredient} style={{ padding: '2px 8px', borderRadius: 6, fontSize: 10, background: 'rgba(158,74,47,0.14)', color: '#FCA5A5' }}>{ingredient}</span>
+                      <span key={ingredient} style={{ padding: '2px 8px', borderRadius: 6, fontSize: 12, background: 'rgba(158,74,47,0.14)', color: '#FCA5A5' }}>{ingredient}</span>
                     ))}
                   </div>
-                  <div style={{ fontSize: 11, color: 'rgba(255,255,255,0.45)' }}>Timeline: <span style={{ color: 'rgba(255,255,255,0.68)' }}>{signal.timeline}</span></div>
-                  <div style={{ marginTop: 3, fontSize: 11, color: 'rgba(255,255,255,0.45)' }}>Recommended action: <span style={{ color: 'rgba(255,255,255,0.68)' }}>{signal.action}</span></div>
+                  <div style={{ fontSize: 12, color: 'rgba(255,255,255,0.45)' }}>Timeline: <span style={{ color: 'rgba(255,255,255,0.68)' }}>{signal.timeline}</span></div>
+                  <div style={{ marginTop: 3, fontSize: 12, color: 'rgba(255,255,255,0.45)' }}>Recommended action: <span style={{ color: 'rgba(255,255,255,0.68)' }}>{signal.action}</span></div>
                 </div>
               )}
             </button>
           );
         })}
 
-        <div style={{ marginTop: 8, fontSize: 11, color: 'rgba(255,255,255,0.35)', lineHeight: 1.5 }}>
+        <div style={{ marginTop: 8, fontSize: 12, color: 'rgba(255,255,255,0.35)', lineHeight: 1.5 }}>
           Signals generated when 3+ independent practitioners report similar adverse events for formulations sharing common ingredients. No individual practitioner or patient identified.
         </div>
       </div>
 
       <div style={{ marginTop: 14, background: 'rgba(255,255,255,0.03)', border: '1px solid rgba(255,255,255,0.08)', borderRadius: 12, padding: 14 }}>
-        <div style={{ fontSize: 13, fontWeight: 700, color: 'rgba(255,255,255,0.75)' }}>Formulations of regulatory interest</div>
-        <div style={{ marginTop: 4, fontSize: 11, color: 'rgba(255,255,255,0.4)', marginBottom: 8 }}>Crossed statistical thresholds for evidence-based registration</div>
+        <div style={{ fontSize: 14, fontWeight: 700, color: 'rgba(255,255,255,0.75)' }}>Formulations of regulatory interest</div>
+        <div style={{ marginTop: 4, fontSize: 12, color: 'rgba(255,255,255,0.4)', marginBottom: 8 }}>Crossed statistical thresholds for evidence-based registration</div>
 
-        <div style={{ display: 'grid', gridTemplateColumns: '1fr 2fr 1fr 1fr 1fr 1fr', gap: 8, padding: '6px 0', borderBottom: '1px solid rgba(255,255,255,0.08)', fontSize: 11, color: 'rgba(255,255,255,0.35)' }}>
-          <div>ID</div><div>Condition</div><div>Outcomes</div><div>Effectiveness</div><div>Side effects</div><div>Readiness</div>
+        <div style={{ display: 'grid', gridTemplateColumns: '1fr 2fr 1fr 1fr 1fr 1fr', gap: 8, padding: '6px 0', borderBottom: '1px solid rgba(255,255,255,0.08)', fontSize: 12, color: 'rgba(255,255,255,0.35)' }}>
+          <div>ID</div><div>Condition</div><div>Outcomes</div><div>Reported improvement</div><div>Side effects</div><div>Readiness</div>
         </div>
 
         {interestFormulations.map((formulation) => {
@@ -188,19 +191,19 @@ export default function RegulatorView() {
               <button
                 type="button"
                 onClick={() => setExpandedFormulation((prev) => (prev === formulation.id ? null : formulation.id))}
-                style={{ width: '100%', background: 'none', border: 'none', cursor: 'pointer', textAlign: 'left', padding: '8px 0', borderBottom: '1px solid rgba(255,255,255,0.06)', display: 'grid', gridTemplateColumns: '1fr 2fr 1fr 1fr 1fr 1fr', gap: 8, alignItems: 'center', color: 'rgba(255,255,255,0.75)', fontSize: 12, fontFamily: "'Plus Jakarta Sans', sans-serif" }}
+                style={{ width: '100%', background: 'none', border: 'none', cursor: 'pointer', textAlign: 'left', padding: '8px 0', borderBottom: '1px solid rgba(255,255,255,0.06)', display: 'grid', gridTemplateColumns: '1fr 2fr 1fr 1fr 1fr 1fr', gap: 8, alignItems: 'center', color: 'rgba(255,255,255,0.75)', fontSize: 13, fontFamily: "'Manrope', sans-serif" }}
               >
                 <div>{formulation.anonId}</div>
                 <div>{formulation.conditions[0]}</div>
                 <div>{formulation.tracked}</div>
-                <div>{formulation.effectiveness}%</div>
+                <div>{formulation.effectiveness}% (n={formulation.tracked})</div>
                 <div>{formulation.sideEffects.count}</div>
                 <div style={{ color: formulation.effectiveness >= 80 ? '#4ADE80' : '#FCD34D' }}>{formulation.effectiveness >= 80 ? 'High' : 'Medium'}</div>
               </button>
 
               {expanded && (
                 <div style={{ margin: '0 0 10px', padding: 10, borderRadius: 10, background: 'rgba(255,255,255,0.02)', border: '1px solid rgba(255,255,255,0.08)' }}>
-                  <div style={{ fontSize: 12, color: 'rgba(255,255,255,0.6)', marginBottom: 6 }}>
+                  <div style={{ fontSize: 13, color: 'rgba(255,255,255,0.6)', marginBottom: 6 }}>
                     Ingredients: {formulation.ingredients.map((item) => item.botanical).join(', ')}
                   </div>
                   <div style={{ display: 'flex', gap: 2, height: 18, borderRadius: 6, overflow: 'hidden', marginBottom: 8 }}>
@@ -208,8 +211,8 @@ export default function RegulatorView() {
                       <div key={segment.key} style={{ width: `${segment.value}%`, background: segment.color }} />
                     ))}
                   </div>
-                  <div style={{ fontSize: 12, color: 'rgba(255,255,255,0.56)', marginBottom: 4 }}>Geographic distribution: primarily Southwest Nigeria</div>
-                  <div style={{ fontSize: 12, color: 'rgba(255,255,255,0.56)' }}>
+                  <div style={{ fontSize: 13, color: 'rgba(255,255,255,0.56)', marginBottom: 4 }}>Geographic distribution: primarily Southwest Nigeria</div>
+                  <div style={{ fontSize: 13, color: 'rgba(255,255,255,0.56)' }}>
                     This formulation meets the evidence threshold for expanded registration review under the proposed traditional medicine regulatory pathway.
                   </div>
                 </div>
@@ -219,14 +222,14 @@ export default function RegulatorView() {
         })}
       </div>
 
-      <div style={{ marginTop: 24, paddingTop: 24, borderTop: '1px solid rgba(255,255,255,0.06)', display: 'flex', alignItems: 'center', justifyContent: 'center', flexWrap: 'wrap', gap: 16, color: 'rgba(255,255,255,0.45)', fontSize: 11 }}>
-        <span style={{ display: 'inline-flex', alignItems: 'center', gap: 6 }}><span style={{ width: 28, height: 28, borderRadius: '50%', background: 'rgba(27,107,58,0.12)', display: 'inline-flex', alignItems: 'center', justifyContent: 'center' }}>🌿</span> Practitioners</span>
+      <div style={{ marginTop: 24, paddingTop: 24, borderTop: '1px solid rgba(255,255,255,0.06)', display: 'flex', alignItems: 'center', justifyContent: 'center', flexWrap: 'wrap', gap: 16, color: 'rgba(255,255,255,0.45)', fontSize: 12 }}>
+        <span style={{ display: 'inline-flex', alignItems: 'center', gap: 6 }}>Practitioners</span>
         <span style={{ color: 'rgba(27,107,58,0.6)' }}>→</span>
-        <span style={{ display: 'inline-flex', alignItems: 'center', gap: 6 }}><span style={{ width: 28, height: 28, borderRadius: '50%', background: 'rgba(255,255,255,0.08)', display: 'inline-flex', alignItems: 'center', justifyContent: 'center' }}>📊</span> Outcome data</span>
+        <span style={{ display: 'inline-flex', alignItems: 'center', gap: 6 }}>Outcome data</span>
         <span style={{ color: 'rgba(184,134,11,0.6)' }}>→</span>
-        <span style={{ display: 'inline-flex', alignItems: 'center', gap: 6 }}><span style={{ width: 28, height: 28, borderRadius: '50%', background: 'rgba(45,75,142,0.15)', display: 'inline-flex', alignItems: 'center', justifyContent: 'center' }}>🔬</span> Research</span>
+        <span style={{ display: 'inline-flex', alignItems: 'center', gap: 6 }}>Research</span>
         <span style={{ color: 'rgba(45,75,142,0.7)' }}>→</span>
-        <span style={{ display: 'inline-flex', alignItems: 'center', gap: 6 }}><span style={{ width: 28, height: 28, borderRadius: '50%', background: 'rgba(74,222,128,0.15)', display: 'inline-flex', alignItems: 'center', justifyContent: 'center' }}>✅</span> Validation</span>
+        <span style={{ display: 'inline-flex', alignItems: 'center', gap: 6 }}>Documented formulations</span>
         <span style={{ color: 'rgba(255,255,255,0.28)' }}>→</span>
         <span style={{ color: 'rgba(255,255,255,0.55)' }}>↩ cycle accelerates</span>
       </div>
