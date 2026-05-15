@@ -22,7 +22,7 @@ export default function App() {
     const shouldStayInDemo = params.get('demo') === '1';
 
     if (window.location.pathname === '/' && !shouldStayInDemo) {
-      window.location.replace('/landing.html');
+      window.location.replace('/landing/');
     }
   }, []);
 
@@ -60,7 +60,7 @@ export default function App() {
       }}>
         <div style={{ maxWidth: 1200, margin: '0 auto', padding: '0 24px', display: 'flex', alignItems: 'center', gap: 16, flexWrap: 'wrap' }}>
           <a
-            href="/landing.html"
+            href="/landing/"
             aria-label="Go to Sanko landing page"
             style={{ display: 'flex', alignItems: 'center', gap: 8, marginRight: 8, textDecoration: 'none' }}
           >
