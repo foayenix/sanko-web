@@ -15,7 +15,7 @@ export default function PublicView() {
   }, [toast]);
 
   return (
-    <div className="view-light view-public" style={{ maxWidth: 900, margin: '0 auto', padding: 24 }}>
+    <div className="view-light view-public public-shell" style={{ maxWidth: 900, margin: '0 auto', padding: 24 }}>
       <div style={{ textAlign: 'center' }}>
         <div style={{ display: 'inline-block', padding: '5px 12px', borderRadius: 999, background: 'rgba(184,134,11,0.12)', border: '1px solid rgba(184,134,11,0.24)', color: COLORS.gold, fontSize: 12, fontWeight: 700, marginBottom: 10 }}>
           Open data
@@ -26,7 +26,7 @@ export default function PublicView() {
         </div>
       </div>
 
-      <div style={{ marginTop: 16, display: 'grid', gridTemplateColumns: 'repeat(4, minmax(0, 1fr))', gap: 10, textAlign: 'center' }}>
+      <div className="public-kpis" style={{ marginTop: 16, display: 'grid', gridTemplateColumns: 'repeat(4, minmax(0, 1fr))', gap: 10, textAlign: 'center' }}>
         <div style={{ background: 'rgba(255,255,255,0.03)', border: '1px solid rgba(255,255,255,0.07)', borderRadius: 10, padding: 14 }}><div style={{ fontFamily: "'Manrope', sans-serif", fontSize: 32, color: COLORS.forest }}>12,300</div><div style={{ fontSize: 12, color: 'rgba(255,255,255,0.4)' }}>Practitioners</div><div style={{ fontSize: 12, color: 'rgba(255,255,255,0.32)' }}>Tier 1 active deployment</div></div>
         <div style={{ background: 'rgba(255,255,255,0.03)', border: '1px solid rgba(255,255,255,0.07)', borderRadius: 10, padding: 14 }}><div style={{ fontFamily: "'Manrope', sans-serif", fontSize: 32 }}>35,600</div><div style={{ fontSize: 12, color: 'rgba(255,255,255,0.4)' }}>Formulations</div><div style={{ fontSize: 12, color: 'rgba(255,255,255,0.32)' }}>Across 3 active countries</div></div>
         <div style={{ background: 'rgba(255,255,255,0.03)', border: '1px solid rgba(255,255,255,0.07)', borderRadius: 10, padding: 14 }}><div style={{ fontFamily: "'Manrope', sans-serif", fontSize: 32, color: '#4ADE80' }}>141,000</div><div style={{ fontSize: 12, color: 'rgba(255,255,255,0.4)' }}>Patient outcomes</div><div style={{ fontSize: 12, color: 'rgba(255,255,255,0.32)' }}>Patient-reported and linked</div></div>
@@ -37,9 +37,9 @@ export default function PublicView() {
         Patient-reported outcomes. Documentation signal, not clinical efficacy.
       </div>
 
-      <section style={{ marginTop: 14, background: 'rgba(255,255,255,0.03)', border: '1px solid rgba(255,255,255,0.08)', borderRadius: 12, padding: 14 }}>
+      <section className="public-country-section" style={{ marginTop: 14, background: 'rgba(255,255,255,0.03)', border: '1px solid rgba(255,255,255,0.08)', borderRadius: 12, padding: 14 }}>
         <div style={{ marginBottom: 8, fontSize: 12, letterSpacing: 0.8, textTransform: 'uppercase', color: 'var(--muted)', fontWeight: 700 }}>Tier 1 — Active deployment (by 2028)</div>
-        <div style={{ display: 'grid', gridTemplateColumns: '1.5fr 1fr 1fr 1fr 1.5fr 1.8fr', gap: 8, paddingBottom: 8, borderBottom: '1px solid rgba(255,255,255,0.08)', fontSize: 12, color: 'rgba(255,255,255,0.35)' }}>
+        <div className="public-tier1-head" style={{ display: 'grid', gridTemplateColumns: '1.5fr 1fr 1fr 1fr 1.5fr 1.8fr', gap: 8, paddingBottom: 8, borderBottom: '1px solid rgba(255,255,255,0.08)', fontSize: 12, color: 'rgba(255,255,255,0.35)' }}>
           <div>Country</div><div>Practitioners</div><div>Formulations</div><div>Outcomes</div><div>Languages</div><div>Status</div>
         </div>
 
@@ -50,7 +50,7 @@ export default function PublicView() {
         }, {
           country: 'Kenya', practitioners: '1,800', formulations: '5,400', outcomes: '21,000', languages: 'Kiswahili, English', status: 'Targeted 2028',
         }].map((row) => (
-          <div key={row.country} style={{ display: 'grid', gridTemplateColumns: '1.5fr 1fr 1fr 1fr 1.5fr 1.8fr', gap: 8, padding: '8px 0', borderBottom: '1px solid rgba(255,255,255,0.06)', fontSize: 13, color: 'rgba(255,255,255,0.72)' }}>
+          <div key={row.country} className="public-tier1-row" style={{ display: 'grid', gridTemplateColumns: '1.5fr 1fr 1fr 1fr 1.5fr 1.8fr', gap: 8, padding: '8px 0', borderBottom: '1px solid rgba(255,255,255,0.06)', fontSize: 13, color: 'rgba(255,255,255,0.72)' }}>
             <div>{row.country}</div>
             <div>{row.practitioners}</div>
             <div>{row.formulations}</div>
@@ -61,7 +61,7 @@ export default function PublicView() {
         ))}
 
         <div style={{ marginTop: 14, marginBottom: 8, fontSize: 12, letterSpacing: 0.8, textTransform: 'uppercase', color: 'var(--muted)', fontWeight: 700 }}>Tier 2 — Targeted expansion (by 2030)</div>
-        <div style={{ display: 'grid', gridTemplateColumns: '1.4fr 2.6fr', gap: 8, paddingBottom: 8, borderBottom: '1px solid rgba(255,255,255,0.08)', fontSize: 12, color: 'rgba(255,255,255,0.35)' }}>
+        <div className="public-tier2-head" style={{ display: 'grid', gridTemplateColumns: '1.4fr 2.6fr', gap: 8, paddingBottom: 8, borderBottom: '1px solid rgba(255,255,255,0.08)', fontSize: 12, color: 'rgba(255,255,255,0.35)' }}>
           <div>Country</div><div>Status</div>
         </div>
         {[{
@@ -71,7 +71,7 @@ export default function PublicView() {
         }, {
           country: '+ 4 more East/West African countries', status: 'Subject to funding and partnership',
         }].map((row) => (
-          <div key={row.country} style={{ display: 'grid', gridTemplateColumns: '1.4fr 2.6fr', gap: 8, padding: '8px 0', borderBottom: '1px solid rgba(255,255,255,0.06)', fontSize: 13, color: 'rgba(255,255,255,0.72)' }}>
+          <div key={row.country} className="public-tier2-row" style={{ display: 'grid', gridTemplateColumns: '1.4fr 2.6fr', gap: 8, padding: '8px 0', borderBottom: '1px solid rgba(255,255,255,0.06)', fontSize: 13, color: 'rgba(255,255,255,0.72)' }}>
             <div>{row.country}</div>
             <div>{row.status}</div>
           </div>
@@ -158,7 +158,7 @@ export default function PublicView() {
         `}</style>
       </section>
 
-      <div style={{ marginTop: 14, display: 'flex', flexDirection: 'column', gap: 10 }}>
+      <div className="public-insights" style={{ marginTop: 14, display: 'flex', flexDirection: 'column', gap: 10 }}>
         <div style={{ borderLeft: `3px solid ${COLORS.forest}`, background: 'rgba(255,255,255,0.03)', border: '1px solid rgba(255,255,255,0.08)', borderRadius: 10, padding: 12 }}>
           <div style={{ fontSize: 14, color: 'rgba(255,255,255,0.8)', lineHeight: 1.6 }}>Across 12,000 documented malaria/fever cases (across Tier 1 countries), practitioners reported <strong>82% patient-reported improvement</strong> within 5 days.</div>
           <div style={{ marginTop: 6, fontSize: 12, color: 'rgba(255,255,255,0.4)' }}>Based on patient-reported outcomes via WhatsApp and SMS follow-up</div>
@@ -175,7 +175,7 @@ export default function PublicView() {
         </div>
       </div>
 
-      <div style={{ marginTop: 14, border: '1px dashed rgba(255,255,255,0.12)', borderRadius: 12, textAlign: 'center', padding: 20 }}>
+      <div className="public-report-card" style={{ marginTop: 14, border: '1px dashed rgba(255,255,255,0.12)', borderRadius: 12, textAlign: 'center', padding: 20 }}>
         <div style={{ fontFamily: "'Manrope', sans-serif", fontSize: 20, color: 'rgba(255,255,255,0.9)' }}>Annual report: The state of African traditional medicine 2030</div>
         <div style={{ marginTop: 6, fontSize: 13, color: 'rgba(255,255,255,0.45)' }}>
           The population-level data WHO has been asking for since 2002 — produced by practitioners, for the first time.
@@ -189,7 +189,7 @@ export default function PublicView() {
         </button>
       </div>
 
-      <div style={{ marginTop: 24, paddingTop: 24, borderTop: '1px solid rgba(255,255,255,0.06)', display: 'flex', alignItems: 'center', justifyContent: 'center', flexWrap: 'wrap', gap: 16, color: 'rgba(255,255,255,0.45)', fontSize: 12 }}>
+      <div className="public-flow-strip" style={{ marginTop: 24, paddingTop: 24, borderTop: '1px solid rgba(255,255,255,0.06)', display: 'flex', alignItems: 'center', justifyContent: 'center', flexWrap: 'wrap', gap: 16, color: 'rgba(255,255,255,0.45)', fontSize: 12 }}>
         <span style={{ display: 'inline-flex', alignItems: 'center', gap: 6 }}>Practitioners</span>
         <span style={{ color: 'rgba(27,107,58,0.6)' }}>→</span>
         <span style={{ display: 'inline-flex', alignItems: 'center', gap: 6 }}>Outcome data</span>

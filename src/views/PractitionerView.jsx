@@ -55,7 +55,7 @@ function getOutcomeSegments(outcomes) {
 
 function DashboardView({ onOpenVault, onOpenPatient, onOpenFormulation, onOpenPatients }) {
   return (
-    <div style={{ display: 'flex', flexDirection: 'column', gap: 16 }}>
+    <div className="practitioner-dashboard" style={{ display: 'flex', flexDirection: 'column', gap: 16 }}>
       <div style={{ display: 'flex', flexDirection: 'column', gap: 8 }}>
         <button
           type="button"
@@ -130,7 +130,7 @@ function DashboardView({ onOpenVault, onOpenPatient, onOpenFormulation, onOpenPa
         <EOSMPanel />
       </div>
 
-      <div style={{ display: 'grid', gridTemplateColumns: 'repeat(4, minmax(0, 1fr))', gap: 12 }}>
+      <div className="practitioner-dashboard-kpis" style={{ display: 'grid', gridTemplateColumns: 'repeat(4, minmax(0, 1fr))', gap: 12 }}>
         <div style={{ background: 'rgba(255,255,255,0.02)', border: '1px solid rgba(255,255,255,0.05)', borderRadius: 10, padding: '14px 16px' }}>
           <div style={{ fontFamily: "'Manrope', sans-serif", fontSize: 28, color: COLORS.forest }}>43</div>
           <div style={{ fontSize: 13, color: 'rgba(255,255,255,0.35)' }}>Formulations in vault</div>
@@ -157,8 +157,8 @@ function DashboardView({ onOpenVault, onOpenPatient, onOpenFormulation, onOpenPa
         Patient-reported outcomes. Documentation signal, not clinical efficacy.
       </div>
 
-      <div style={{ background: 'rgba(255,255,255,0.02)', border: '1px solid rgba(255,255,255,0.06)', borderRadius: 12, padding: '16px 16px 8px' }}>
-        <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: 6 }}>
+      <div className="practitioner-dashboard-top-formulations" style={{ background: 'rgba(255,255,255,0.02)', border: '1px solid rgba(255,255,255,0.06)', borderRadius: 12, padding: '16px 16px 8px' }}>
+        <div className="practitioner-dashboard-top-header" style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: 6 }}>
           <div style={{ fontSize: 14, fontWeight: 700, textTransform: 'uppercase', letterSpacing: 0.6, color: 'rgba(255,255,255,0.45)' }}>
             Top formulations by outcomes
           </div>
@@ -232,7 +232,7 @@ function DashboardView({ onOpenVault, onOpenPatient, onOpenFormulation, onOpenPa
                 ))}
               </div>
 
-              <div style={{ marginTop: 6, display: 'flex', gap: 12, fontSize: 12, color: 'rgba(255,255,255,0.25)' }}>
+              <div className="practitioner-outcome-legend" style={{ marginTop: 6, display: 'flex', gap: 12, fontSize: 12, color: 'rgba(255,255,255,0.25)' }}>
                 <span>● Recovered</span>
                 <span>● Improved</span>
                 <span>● No change</span>
@@ -254,7 +254,7 @@ function DashboardView({ onOpenVault, onOpenPatient, onOpenFormulation, onOpenPa
           </button>
         </div>
 
-        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, minmax(0, 1fr))', gap: 8, marginBottom: 12 }}>
+        <div className="practitioner-dashboard-community-kpis" style={{ display: 'grid', gridTemplateColumns: 'repeat(3, minmax(0, 1fr))', gap: 8, marginBottom: 12 }}>
           <div style={{ background: 'rgba(255,255,255,0.01)', border: '1px solid rgba(255,255,255,0.05)', borderRadius: 10, padding: 10 }}>
             <div style={{ fontFamily: "'Manrope', sans-serif", fontSize: 22, color: '#fff' }}>214</div>
             <div style={{ fontSize: 13, color: 'rgba(255,255,255,0.35)' }}>Active practitioners</div>
@@ -482,7 +482,7 @@ function FormulationDetailView({ formulation, playingAudio, onToggleAudio, onBac
           <span>● Worsened</span>
         </div>
 
-        <div style={{ marginTop: 12, paddingTop: 12, borderTop: '1px solid rgba(255,255,255,0.06)', display: 'grid', gridTemplateColumns: 'repeat(3, minmax(0, 1fr))', gap: 12 }}>
+        <div className="practitioner-detail-kpis" style={{ marginTop: 12, paddingTop: 12, borderTop: '1px solid rgba(255,255,255,0.06)', display: 'grid', gridTemplateColumns: 'repeat(3, minmax(0, 1fr))', gap: 12 }}>
           <div>
             <div style={{ fontFamily: "'Manrope', sans-serif", fontSize: 24, color: '#fff' }}>4.2</div>
             <div style={{ fontSize: 13, color: 'rgba(255,255,255,0.35)' }}>Avg days to improvement</div>
@@ -711,7 +711,7 @@ function CommunityView() {
 
   return (
     <div style={{ display: 'flex', flexDirection: 'column', gap: 12 }}>
-      <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, minmax(0, 1fr))', gap: 10 }}>
+      <div className="practitioner-community-kpis" style={{ display: 'grid', gridTemplateColumns: 'repeat(3, minmax(0, 1fr))', gap: 10 }}>
         <div style={{ background: 'rgba(255,255,255,0.02)', border: '1px solid rgba(255,255,255,0.06)', borderRadius: 12, padding: 14 }}><div style={{ fontFamily: "'Manrope', sans-serif", fontSize: 26 }}>214</div><div style={{ fontSize: 13, color: 'rgba(255,255,255,0.35)' }}>Active members</div></div>
         <div style={{ background: 'rgba(255,255,255,0.02)', border: '1px solid rgba(255,255,255,0.06)', borderRadius: 12, padding: 14 }}><div style={{ fontFamily: "'Manrope', sans-serif", fontSize: 26 }}>8,420</div><div style={{ fontSize: 13, color: 'rgba(255,255,255,0.35)' }}>Total formulations</div></div>
         <div style={{ background: 'rgba(255,255,255,0.02)', border: '1px solid rgba(255,255,255,0.06)', borderRadius: 12, padding: 14 }}><div style={{ fontFamily: "'Manrope', sans-serif", fontSize: 26, color: COLORS.forest }}>84%</div><div style={{ fontSize: 13, color: 'rgba(255,255,255,0.35)' }}>Avg patient-reported improvement</div></div>
@@ -1637,7 +1637,7 @@ export default function PractitionerView() {
   const activeFormulation = selectedFormulation ? FORMULATIONS.find((formulation) => formulation.id === selectedFormulation) : null;
 
   return (
-    <div className="view-light view-practitioner" style={{ maxWidth: 1200, margin: '0 auto', padding: 24 }}>
+    <div className="view-light view-practitioner practitioner-shell" style={{ maxWidth: 1200, margin: '0 auto', padding: 24 }}>
       <style>{`
         @keyframes wave {
           from { transform: scaleY(0.5); opacity: 0.5; }
@@ -1645,8 +1645,8 @@ export default function PractitionerView() {
         }
       `}</style>
 
-      <div style={{ marginBottom: 14, display: 'flex', justifyContent: 'center' }}>
-        <div style={{ display: 'inline-grid', gridTemplateColumns: '1fr 1fr', border: '1px solid var(--rule)', borderRadius: 4, overflow: 'hidden', background: 'var(--bg)' }}>
+      <div className="practitioner-surface-toggle" style={{ marginBottom: 14, display: 'flex', justifyContent: 'center' }}>
+        <div className="practitioner-surface-toggle-grid" style={{ display: 'inline-grid', gridTemplateColumns: '1fr 1fr', border: '1px solid var(--rule)', borderRadius: 4, overflow: 'hidden', background: 'var(--bg)' }}>
           <button
             type="button"
             onClick={() => setSurfaceTab('practitioner')}
@@ -1687,12 +1687,12 @@ export default function PractitionerView() {
         <PractitionerWhatsAppView />
       ) : (
         <>
-          <div style={{ marginBottom: 12, fontFamily: "'Manrope', sans-serif", fontStyle: 'italic', color: 'var(--muted)', fontSize: 13 }}>
+          <div className="practitioner-web-note" style={{ marginBottom: 12, fontFamily: "'Manrope', sans-serif", fontStyle: 'italic', color: 'var(--muted)', fontSize: 13 }}>
             Generated from WhatsApp documentation. See Practitioner view tab for source interaction.
           </div>
 
-          <div style={{ display: 'grid', gridTemplateColumns: '260px 1fr', gap: 20 }}>
-        <aside style={{ background: 'rgba(255,255,255,0.02)', border: '1px solid rgba(255,255,255,0.06)', borderRadius: 14, padding: 20, alignSelf: 'start' }}>
+          <div className="practitioner-web-grid" style={{ display: 'grid', gridTemplateColumns: '260px 1fr', gap: 20 }}>
+        <aside className="practitioner-web-aside" style={{ background: 'rgba(255,255,255,0.02)', border: '1px solid rgba(255,255,255,0.06)', borderRadius: 14, padding: 20, alignSelf: 'start' }}>
           <div style={{ marginBottom: 20 }}>
             <div style={{ width: 40, height: 40, borderRadius: 12, background: COLORS.forest, color: '#fff', display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: 15, fontWeight: 700, marginBottom: 8 }}>
               BA
@@ -1744,7 +1744,7 @@ export default function PractitionerView() {
           </div>
         </aside>
 
-        <section>
+        <section className="practitioner-web-main">
           {activeFormulation ? (
             <FormulationDetailView
               formulation={activeFormulation}
@@ -1815,7 +1815,7 @@ export default function PractitionerView() {
         </section>
           </div>
 
-          <div style={{ marginTop: 24, paddingTop: 24, borderTop: '1px solid rgba(255,255,255,0.06)', display: 'flex', alignItems: 'center', justifyContent: 'center', flexWrap: 'wrap', gap: 16, color: 'rgba(255,255,255,0.45)', fontSize: 12 }}>
+          <div className="practitioner-flow-strip" style={{ marginTop: 24, paddingTop: 24, borderTop: '1px solid rgba(255,255,255,0.06)', display: 'flex', alignItems: 'center', justifyContent: 'center', flexWrap: 'wrap', gap: 16, color: 'rgba(255,255,255,0.45)', fontSize: 12 }}>
         <span style={{ display: 'inline-flex', alignItems: 'center', gap: 6 }}>Practitioners</span>
         <span style={{ color: 'rgba(27,107,58,0.6)' }}>→</span>
         <span style={{ display: 'inline-flex', alignItems: 'center', gap: 6 }}>Outcome data</span>

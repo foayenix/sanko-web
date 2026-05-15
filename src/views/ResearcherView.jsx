@@ -300,7 +300,7 @@ export default function ResearcherView() {
   const selected = selectedFormulation ? FORMULATIONS.find((item) => item.id === selectedFormulation) : null;
 
   return (
-    <div className="view-light view-researcher" style={{ maxWidth: 1000, margin: '0 auto', padding: 24 }}>
+    <div className="view-light view-researcher researcher-shell" style={{ maxWidth: 1000, margin: '0 auto', padding: 24 }}>
       <div style={{ display: 'inline-block', padding: '5px 12px', borderRadius: 999, background: 'rgba(184,134,11,0.12)', border: '1px solid rgba(184,134,11,0.24)', color: COLORS.gold, fontSize: 12, fontWeight: 700, marginBottom: 10 }}>
         Sanko Research Portal
       </div>
@@ -309,7 +309,7 @@ export default function ResearcherView() {
         Search anonymised formulation data with consent-gated access. No recipes without practitioner approval.
       </div>
 
-      <div style={{ marginTop: 14, display: 'flex', alignItems: 'center', gap: 8, background: 'rgba(255,255,255,0.04)', border: '1px solid rgba(255,255,255,0.1)', borderRadius: 10, padding: '12px 16px' }}>
+      <div className="researcher-search" style={{ marginTop: 14, display: 'flex', alignItems: 'center', gap: 8, background: 'rgba(255,255,255,0.04)', border: '1px solid rgba(255,255,255,0.1)', borderRadius: 10, padding: '12px 16px' }}>
         <input
           value={search}
           onChange={(event) => setSearch(event.target.value)}
@@ -329,7 +329,7 @@ export default function ResearcherView() {
         <EOSMPanel />
       </div>
 
-      <div style={{ marginTop: 14, display: 'flex', flexDirection: 'column', gap: 10 }}>
+      <div className="researcher-results" style={{ marginTop: 14, display: 'flex', flexDirection: 'column', gap: 10 }}>
         {selected ? (
           <FullProfile formulation={selected} onBack={() => setSelectedFormulation(null)} />
         ) : (
@@ -349,13 +349,13 @@ export default function ResearcherView() {
         )}
       </div>
 
-      <div style={{ marginTop: 16, background: 'rgba(255,255,255,0.03)', border: '1px solid rgba(255,255,255,0.08)', borderRadius: 12, padding: 16 }}>
-        <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: 8 }}>
+      <div className="researcher-compounds" style={{ marginTop: 16, background: 'rgba(255,255,255,0.03)', border: '1px solid rgba(255,255,255,0.08)', borderRadius: 12, padding: 16 }}>
+        <div className="researcher-compounds-header" style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: 8 }}>
           <div style={{ fontSize: 14, color: 'rgba(255,255,255,0.75)', fontWeight: 700 }}>Compound frequency explorer</div>
           <button type="button" style={{ background: 'none', border: 'none', color: COLORS.forest, fontSize: 13, cursor: 'pointer' }}>Export dataset →</button>
         </div>
 
-        <div style={{ display: 'grid', gridTemplateColumns: '2fr 2fr 1fr 2fr 1fr', gap: 8, fontSize: 12, color: 'rgba(255,255,255,0.35)', marginBottom: 8 }}>
+        <div className="researcher-compounds-table-head" style={{ display: 'grid', gridTemplateColumns: '2fr 2fr 1fr 2fr 1fr', gap: 8, fontSize: 12, color: 'rgba(255,255,255,0.35)', marginBottom: 8 }}>
           <div>Botanical name</div><div>Local name(s)</div><div>Formulations</div><div>Top conditions</div><div>Avg reported improvement</div>
         </div>
 
@@ -364,6 +364,7 @@ export default function ResearcherView() {
             <button
               type="button"
               onClick={() => setExpandedCompound((prev) => (prev === compound.botanical ? null : compound.botanical))}
+              className="researcher-compounds-row"
               style={{ width: '100%', background: 'none', border: 'none', borderTop: '1px solid rgba(255,255,255,0.06)', cursor: 'pointer', textAlign: 'left', padding: '8px 0', display: 'grid', gridTemplateColumns: '2fr 2fr 1fr 2fr 1fr', gap: 8, alignItems: 'center', color: 'rgba(255,255,255,0.72)', fontFamily: "'Manrope', sans-serif", fontSize: 13 }}
             >
               <div style={{ fontWeight: 700 }}>{compound.botanical}</div>
@@ -386,7 +387,7 @@ export default function ResearcherView() {
         ))}
       </div>
 
-      <div style={{ marginTop: 24, paddingTop: 24, borderTop: '1px solid rgba(255,255,255,0.06)', display: 'flex', alignItems: 'center', justifyContent: 'center', flexWrap: 'wrap', gap: 16, color: 'rgba(255,255,255,0.45)', fontSize: 12 }}>
+      <div className="researcher-flow-strip" style={{ marginTop: 24, paddingTop: 24, borderTop: '1px solid rgba(255,255,255,0.06)', display: 'flex', alignItems: 'center', justifyContent: 'center', flexWrap: 'wrap', gap: 16, color: 'rgba(255,255,255,0.45)', fontSize: 12 }}>
         <span style={{ display: 'inline-flex', alignItems: 'center', gap: 6 }}>Practitioners</span>
         <span style={{ color: 'rgba(27,107,58,0.6)' }}>→</span>
         <span style={{ display: 'inline-flex', alignItems: 'center', gap: 6 }}>Outcome data</span>

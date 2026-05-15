@@ -290,3 +290,170 @@ textarea::placeholder {
     width: fit-content;
   }
 }
+
+@media (max-width: 980px) {
+  .practitioner-shell {
+    padding: 16px !important;
+  }
+
+  .practitioner-web-grid {
+    grid-template-columns: 1fr !important;
+    gap: 14px !important;
+  }
+
+  .practitioner-web-aside {
+    padding: 14px !important;
+  }
+
+  .practitioner-dashboard-kpis {
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+  }
+
+  .practitioner-dashboard-community-kpis,
+  .practitioner-community-kpis,
+  .practitioner-detail-kpis {
+    grid-template-columns: 1fr !important;
+  }
+
+  .practitioner-outcome-legend {
+    flex-wrap: wrap;
+    row-gap: 6px;
+  }
+
+  .practitioner-flow-strip {
+    justify-content: flex-start !important;
+    gap: 10px !important;
+  }
+}
+
+@media (max-width: 640px) {
+  .practitioner-shell {
+    padding: 12px !important;
+  }
+
+  .practitioner-surface-toggle,
+  .practitioner-web-note {
+    margin-bottom: 10px !important;
+  }
+
+  .practitioner-surface-toggle-grid {
+    width: 100%;
+    display: grid !important;
+    grid-template-columns: 1fr 1fr !important;
+  }
+
+  .practitioner-surface-toggle-grid button {
+    padding: 9px 8px !important;
+    font-size: 12px !important;
+  }
+
+  .practitioner-dashboard-kpis {
+    grid-template-columns: 1fr !important;
+  }
+
+  .practitioner-dashboard-top-header {
+    flex-direction: column;
+    align-items: flex-start !important;
+    gap: 8px;
+  }
+}
+
+@media (max-width: 980px) {
+  .researcher-shell,
+  .public-shell,
+  .regulator-shell {
+    padding: 16px !important;
+  }
+
+  .researcher-compounds,
+  .regulator-interest,
+  .public-country-section {
+    overflow-x: auto;
+  }
+
+  .researcher-compounds-table-head,
+  .researcher-compounds-row {
+    min-width: 760px;
+  }
+
+  .regulator-interest-head,
+  .regulator-interest-row {
+    min-width: 820px;
+  }
+
+  .public-tier1-head,
+  .public-tier1-row {
+    min-width: 860px;
+  }
+
+  .public-tier2-head,
+  .public-tier2-row {
+    min-width: 560px;
+  }
+
+  .public-kpis {
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+  }
+
+  .regulator-kpis {
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+  }
+
+  .regulator-top-grid {
+    grid-template-columns: 1fr !important;
+  }
+
+  .researcher-compounds-header {
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+
+  .researcher-flow-strip,
+  .regulator-flow-strip,
+  .public-flow-strip {
+    justify-content: flex-start !important;
+    gap: 10px !important;
+  }
+}
+
+@media (max-width: 760px) {
+  .home-shell {
+    padding: 20px 12px !important;
+  }
+
+  .home-timeline-track,
+  .home-flywheel-grid {
+    flex-direction: column;
+    align-items: stretch !important;
+    gap: 14px !important;
+  }
+
+  .home-timeline-track > div:first-child {
+    display: none;
+  }
+
+  .home-timeline-item {
+    text-align: left !important;
+    padding: 10px;
+    border: 1px solid var(--rule);
+    border-radius: 10px;
+    background: var(--bg-alt);
+  }
+
+  .home-role-grid {
+    grid-template-columns: 1fr !important;
+  }
+}
+
+@media (max-width: 640px) {
+  .researcher-shell,
+  .public-shell,
+  .regulator-shell {
+    padding: 12px !important;
+  }
+
+  .public-kpis,
+  .regulator-kpis {
+    grid-template-columns: 1fr !important;
+  }
+}

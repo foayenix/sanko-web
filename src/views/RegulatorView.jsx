@@ -29,7 +29,7 @@ export default function RegulatorView() {
   const interestFormulations = FORMULATIONS.filter((item) => item.effectiveness >= 80);
 
   return (
-    <div className="view-light view-regulator" style={{ maxWidth: 1100, margin: '0 auto', padding: 24 }}>
+    <div className="view-light view-regulator regulator-shell" style={{ maxWidth: 1100, margin: '0 auto', padding: 24 }}>
       <style>{`
         @keyframes cityPulse {
           from { transform: scale(1); opacity: 0.85; }
@@ -45,7 +45,7 @@ export default function RegulatorView() {
         Real-time data on traditional medicine usage, outcomes, and safety signals across Nigeria.
       </div>
 
-      <div style={{ marginTop: 14, display: 'grid', gridTemplateColumns: 'repeat(5, minmax(0, 1fr))', gap: 10 }}>
+      <div className="regulator-kpis" style={{ marginTop: 14, display: 'grid', gridTemplateColumns: 'repeat(5, minmax(0, 1fr))', gap: 10 }}>
         <div style={{ background: 'rgba(255,255,255,0.03)', border: '1px solid rgba(255,255,255,0.07)', borderRadius: 10, padding: 12 }}><div style={{ fontFamily: "'Manrope', sans-serif", fontSize: 24, color: COLORS.forest }}>12,400</div><div style={{ fontSize: 12, color: 'rgba(255,255,255,0.35)' }}>Active practitioners</div></div>
         <div style={{ background: 'rgba(255,255,255,0.03)', border: '1px solid rgba(255,255,255,0.07)', borderRadius: 10, padding: 12 }}><div style={{ fontFamily: "'Manrope', sans-serif", fontSize: 24 }}>54,200</div><div style={{ fontSize: 12, color: 'rgba(255,255,255,0.35)' }}>Formulations documented</div></div>
         <div style={{ background: 'rgba(255,255,255,0.03)', border: '1px solid rgba(255,255,255,0.07)', borderRadius: 10, padding: 12 }}><div style={{ fontFamily: "'Manrope', sans-serif", fontSize: 24 }}>186,000</div><div style={{ fontSize: 12, color: 'rgba(255,255,255,0.35)' }}>Patient outcomes tracked</div></div>
@@ -53,7 +53,7 @@ export default function RegulatorView() {
         <div style={{ background: 'rgba(255,255,255,0.03)', border: '1px solid rgba(255,255,255,0.07)', borderRadius: 10, padding: 12 }}><div style={{ fontFamily: "'Manrope', sans-serif", fontSize: 24, color: '#F87171' }}>3</div><div style={{ fontSize: 12, color: 'rgba(255,255,255,0.35)' }}>Active safety signals</div></div>
       </div>
 
-      <div style={{ marginTop: 14, display: 'grid', gridTemplateColumns: '1.1fr 1fr', gap: 12 }}>
+      <div className="regulator-top-grid" style={{ marginTop: 14, display: 'grid', gridTemplateColumns: '1.1fr 1fr', gap: 12 }}>
         <div style={{ background: 'rgba(255,255,255,0.03)', border: '1px solid rgba(255,255,255,0.08)', borderRadius: 12, padding: 14 }}>
           <div style={{ fontSize: 14, fontWeight: 700, color: 'rgba(255,255,255,0.75)', marginBottom: 10 }}>Usage density by state</div>
           <div style={{ position: 'relative', height: 200, borderRadius: 10, background: 'radial-gradient(circle at 30% 30%, rgba(27,107,58,0.18), rgba(27,107,58,0.04) 60%, rgba(255,255,255,0.02) 100%)', border: '1px solid rgba(27,107,58,0.14)' }}>
@@ -127,7 +127,7 @@ export default function RegulatorView() {
         </div>
       </div>
 
-      <div style={{ marginTop: 14, background: 'rgba(255,255,255,0.03)', border: '1px solid rgba(255,255,255,0.08)', borderRadius: 12, padding: 14 }}>
+      <div className="regulator-interest" style={{ marginTop: 14, background: 'rgba(255,255,255,0.03)', border: '1px solid rgba(255,255,255,0.08)', borderRadius: 12, padding: 14 }}>
         <div style={{ fontSize: 14, fontWeight: 700, color: '#F87171' }}>Active pharmacovigilance signals</div>
         <div style={{ marginTop: 4, fontSize: 12, color: 'rgba(255,255,255,0.4)', marginBottom: 10 }}>Auto-detected from outcome data</div>
         <div style={{ marginTop: -2, marginBottom: 10, fontSize: 12, letterSpacing: 0.6, textTransform: 'uppercase', color: 'var(--muted)', fontStyle: 'italic' }}>
@@ -180,7 +180,7 @@ export default function RegulatorView() {
         <div style={{ fontSize: 14, fontWeight: 700, color: 'rgba(255,255,255,0.75)' }}>Formulations of regulatory interest</div>
         <div style={{ marginTop: 4, fontSize: 12, color: 'rgba(255,255,255,0.4)', marginBottom: 8 }}>Crossed statistical thresholds for evidence-based registration</div>
 
-        <div style={{ display: 'grid', gridTemplateColumns: '1fr 2fr 1fr 1fr 1fr 1fr', gap: 8, padding: '6px 0', borderBottom: '1px solid rgba(255,255,255,0.08)', fontSize: 12, color: 'rgba(255,255,255,0.35)' }}>
+        <div className="regulator-interest-head" style={{ display: 'grid', gridTemplateColumns: '1fr 2fr 1fr 1fr 1fr 1fr', gap: 8, padding: '6px 0', borderBottom: '1px solid rgba(255,255,255,0.08)', fontSize: 12, color: 'rgba(255,255,255,0.35)' }}>
           <div>ID</div><div>Condition</div><div>Outcomes</div><div>Reported improvement</div><div>Side effects</div><div>Readiness</div>
         </div>
 
@@ -191,6 +191,7 @@ export default function RegulatorView() {
               <button
                 type="button"
                 onClick={() => setExpandedFormulation((prev) => (prev === formulation.id ? null : formulation.id))}
+                className="regulator-interest-row"
                 style={{ width: '100%', background: 'none', border: 'none', cursor: 'pointer', textAlign: 'left', padding: '8px 0', borderBottom: '1px solid rgba(255,255,255,0.06)', display: 'grid', gridTemplateColumns: '1fr 2fr 1fr 1fr 1fr 1fr', gap: 8, alignItems: 'center', color: 'rgba(255,255,255,0.75)', fontSize: 13, fontFamily: "'Manrope', sans-serif" }}
               >
                 <div>{formulation.anonId}</div>
@@ -222,7 +223,7 @@ export default function RegulatorView() {
         })}
       </div>
 
-      <div style={{ marginTop: 24, paddingTop: 24, borderTop: '1px solid rgba(255,255,255,0.06)', display: 'flex', alignItems: 'center', justifyContent: 'center', flexWrap: 'wrap', gap: 16, color: 'rgba(255,255,255,0.45)', fontSize: 12 }}>
+      <div className="regulator-flow-strip" style={{ marginTop: 24, paddingTop: 24, borderTop: '1px solid rgba(255,255,255,0.06)', display: 'flex', alignItems: 'center', justifyContent: 'center', flexWrap: 'wrap', gap: 16, color: 'rgba(255,255,255,0.45)', fontSize: 12 }}>
         <span style={{ display: 'inline-flex', alignItems: 'center', gap: 6 }}>Practitioners</span>
         <span style={{ color: 'rgba(27,107,58,0.6)' }}>→</span>
         <span style={{ display: 'inline-flex', alignItems: 'center', gap: 6 }}>Outcome data</span>
