@@ -1029,8 +1029,8 @@
   // matching [data-link] on the page updates.
     const LINKS = {
       survey: "https://docs.google.com/forms/d/e/1FAIpQLScyJdEXdWeCF8bnLZ-J9Kt2i2AP2G1Yz3zwms0Tst80Mw4Nfg/viewform?usp=sharing&ouid=116255203051530553201", // → practitioner survey URL
-      demo: "../index.html",   // → demo app entry
-      "vision-demo": "../index.html", // → 2030 vision/demo entry
+      demo: "../?demo=1",   // → demo app entry
+      "vision-demo": "../?demo=1", // → 2030 vision/demo entry
       email: "#"               // → contact email URL (e.g. mailto: or form)
     };
   document.querySelectorAll("[data-link]").forEach(el => {

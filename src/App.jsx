@@ -17,6 +17,15 @@ const VIEWS = [
 ];
 
 export default function App() {
+  useEffect(() => {
+    const params = new URLSearchParams(window.location.search);
+    const shouldStayInDemo = params.get('demo') === '1';
+
+    if (window.location.pathname === '/' && !shouldStayInDemo) {
+      window.location.replace('/landing.html');
+    }
+  }, []);
+
   const [view, setView] = useState('home');
   const [showVisionContext, setShowVisionContext] = useState(() => {
     if (typeof window === 'undefined') {
