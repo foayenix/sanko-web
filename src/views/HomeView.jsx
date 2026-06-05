@@ -3,8 +3,8 @@ import VisionContext from '../components/VisionContext';
 
 const phases = [
   { date: 'TODAY', color: '#1B6B3A', title: 'Vault MVP in development', desc: 'Voice + photo documentation\nYemkem clinic as pilot site\nHTSN network' },
-  { date: 'MAY 2027', color: '#2D4B8E', title: 'Practitioner validation', desc: '100 practitioners onboarded\nNigeria validation complete\nGrant applications underway' },
-  { date: 'MAY 2028', color: '#7F77DD', title: 'Evidence pilot', desc: 'Outcome tracking live at Yemkem\nUniversity partnerships\nProduct hardening' },
+  { date: 'JUNE 2027', color: '#2D4B8E', title: 'Practitioner validation', desc: '100 practitioners onboarded\nNigeria validation complete\nGrant applications underway' },
+  { date: 'JUNE 2028', color: '#7F77DD', title: 'Evidence pilot', desc: 'Outcome tracking live at Yemkem\nUniversity partnerships\nProduct hardening' },
   { date: '2030+', color: '#D85A30', title: 'Pan-African platform', desc: '3 countries active · 6+ targeted\nWHO engagement\nWhat you\'re about to see ↓' },
 ];
 

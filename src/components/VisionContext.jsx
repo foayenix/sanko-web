@@ -15,7 +15,7 @@ export default function VisionContext({ visible, onContinue, onDismiss }) {
 
       <div className="vision-context__grid">
         <div>
-          <div className="vision-context__label">Today (May 2026)</div>
+          <div className="vision-context__label">Today</div>
           <div className="vision-context__list">
             <div>Sanko Vault MVP in development</div>
             <div>HTSN partnership confirmed</div>
